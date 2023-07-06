@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
 module.exports = {
+  mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: {
     popup: "./src/popup.jsx",
     background: "./src/background.jsx",

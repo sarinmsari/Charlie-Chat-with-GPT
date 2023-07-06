@@ -3,9 +3,65 @@
 @tailwind utilities;
 
 body {
+  max-height: 600px;
+  max-width: 600px;
+  background-color: #0f172a;
+}
+.popup-container {
+  margin: 3vw;
+}
+
+/* Navbar styling */
+.navbar-contianer {
+  width: 100vw;
+  padding: 1vh;
+}
+.navbar-header {
+  text-align: left;
+  font-size: medium;
+  font-weight: 600;
+  color: white;
+}
+/* Navbar styling end */
+
+/* chat feild styling */
+.chat-body-container {
+  width: 550px;
   height: 400px;
-  width: 300px;
+  margin-top: 20px;
+  /* border: 1px solid #6183d4;
+  border-radius: 10px; */
 }
-.popup-outbox {
-  color: blue;
+.chatbox {
+  margin: 8px 5px;
+  background-color: #1e293b;
+  color: white;
+  max-width: 300px;
+  width: fit-content;
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: medium;
 }
+
+.chat-input-container {
+  width: 100%;
+  padding: 3px;
+  border: 1.5px solid #1e293b;
+  border-radius: 10px;
+}
+.chat-input-section {
+  width: 85%;
+  padding: 5px;
+  font-size: medium;
+  background-color: transparent;
+  text-decoration: none;
+  border: none;
+}
+.chat-submit-button {
+  width: 75px;
+  height: 30px;
+  background-color: #1e293b;
+  color: white;
+  border-radius: 5px;
+}
+/* chat feild styling end */
