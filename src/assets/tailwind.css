@@ -48,6 +48,9 @@ body {
   padding: 3px;
   border: 1.5px solid #1e293b;
   border-radius: 10px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
 }
 .chat-input-section {
   width: 85%;
@@ -56,12 +59,16 @@ body {
   background-color: transparent;
   text-decoration: none;
   border: none;
+  color: white;
+}
+input:focus {
+  outline: none;
 }
 .chat-submit-button {
-  width: 75px;
   height: 30px;
-  background-color: #1e293b;
   color: white;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* chat feild styling end */

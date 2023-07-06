@@ -1,24 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 
-let inputvlaue = "";
 function ChatInput() {
+  const [inputText, setInputText] = useState("");
+
+  const handleInput = (e) => {
+    setInputText(e.target.value);
+  };
+  const handleSubmit = () => {
+    console.log(inputText);
+  };
+
   return (
     <div className="chat-input-container">
       <input
         name="chatInput"
         className="chat-input-section"
         placeholder="Start typing your prompt here..."
-        value={inputvlaue}
+        value={inputText}
+        onChange={handleInput}
       />
-      <button type="submit" className="chat-submit-button" onSubmit={handleSubmit()}>
-        Chat
-      </button>
+      <div className="chat-submit-button">
+        <img
+          src="./send.png"
+          alt="send icon"
+          srcset=""
+          onClick={handleSubmit}
+        />
+      </div>
+      {/* <IconButton className="chat-submit-button"></IconButton> */}
     </div>
   );
 }
 
 export default ChatInput;
-
-const handleSubmit = () => {
-  console.log(inputvlaue);
-};
