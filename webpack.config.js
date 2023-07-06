@@ -1,3 +1,5 @@
+const autoprefixer = require("autoprefixer");
+const tailwindcss = require("tailwindcss");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
@@ -23,6 +25,24 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                ident: "postcss",
+                plugins: [tailwindcss, autoprefixer],
+              },
+            },
+          },
+        ],
+      },
+      //{ test: /\.css$/, use: "css-loader" },
+      { test: /\.tsx$/, use: "ts-loader" },
     ],
   },
   plugins: [
@@ -31,7 +51,7 @@ module.exports = {
       filename: "popup.html",
     }),
     new CopyPlugin({
-      patterns: [{ from: "public"}],
+      patterns: [{ from: "public" }],
     }),
   ],
 };
