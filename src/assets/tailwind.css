@@ -42,13 +42,26 @@ body {
   border-radius: 10px;
   font-size: medium;
 }
-.chat-query-box{
-  align-self: flex-start;
-}
-.chat-response-box{
+.chat-query-box {
   align-self: flex-end;
 }
+.chat-response-box {
+  align-self: flex-start;
+}
 
+/* error message section */
+.error-message-container {
+  margin: 8px 5px;
+  background-color: #1e293b;
+  color: white;
+  border-bottom: 1px solid white;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: medium;
+  text-align: center;
+}
+
+/* chat input section */
 .chat-input-container {
   width: 100%;
   padding: 3px;
