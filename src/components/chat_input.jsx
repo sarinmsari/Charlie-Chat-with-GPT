@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 
-function ChatInput() {
+function ChatInput({updateChatBox}) {
   const [inputText, setInputText] = useState("");
+  const [responseText, setResponseText] = useState("");
 
   const handleInput = (e) => {
     setInputText(e.target.value);
   };
   const handleSubmit = () => {
     console.log(inputText);
+    localStorage.setItem("chat-query", inputText);
+    //TODO: update response text
+    localStorage.setItem("chat-query-response", "Charlie here..., under development :)");
+    setInputText("");
+    setResponseText("");
+    updateChatBox();
   };
 
   return (
@@ -27,7 +34,6 @@ function ChatInput() {
           onClick={handleSubmit}
         />
       </div>
-      {/* <IconButton className="chat-submit-button"></IconButton> */}
     </div>
   );
 }

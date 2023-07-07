@@ -16,11 +16,9 @@ body {
   width: 100vw;
   padding: 1vh;
 }
-.navbar-header {
-  text-align: left;
-  font-size: medium;
-  font-weight: 600;
-  color: white;
+.navbar-icon {
+  height: 25px;
+  width: 25px;
 }
 /* Navbar styling end */
 
@@ -29,10 +27,12 @@ body {
   width: 550px;
   height: 400px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
   /* border: 1px solid #6183d4;
   border-radius: 10px; */
 }
-.chatbox {
+.chat-box {
   margin: 8px 5px;
   background-color: #1e293b;
   color: white;
@@ -41,6 +41,12 @@ body {
   padding: 6px 8px;
   border-radius: 10px;
   font-size: medium;
+}
+.chat-query-box{
+  align-self: flex-start;
+}
+.chat-response-box{
+  align-self: flex-end;
 }
 
 .chat-input-container {
@@ -66,9 +72,20 @@ input:focus {
 }
 .chat-submit-button {
   height: 30px;
+  margin-right: 8px;
   color: white;
+  opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+}
+.chat-submit-button:hover {
+  opacity: 1;
+  rotate: 90;
+}
+.chat-submit-button img {
+  width: 20px;
+  height: auto;
 }
 /* chat feild styling end */
