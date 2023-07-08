@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
-import ContentScript, { informOnLoad } from "./scripts/contentScript.jsx";
+import ContentScript from "./scripts/contentScript.jsx";
 
 function init() {
   const appContainer = document.createElement("div");
@@ -11,7 +11,7 @@ function init() {
   setTimeout(function () {
     console.log(document.getElementById("secondary-inner"));
     document.getElementById("secondary-inner").prepend(appContainer);
-  }, 1000);
+  }, 2000);
 
   const root = createRoot(appContainer);
   console.log(appContainer);

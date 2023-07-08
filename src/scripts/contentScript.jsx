@@ -1,9 +1,13 @@
 import React from "react";
+import NavBar from "../components/navbar.jsx";
+import ChatFeild from "../components/chat_feild.jsx";
+import "../assets/foreground.css";
 
 function ContentScript() {
   return (
-    <div className="content-wrapper">
-      <h1>Content Script</h1>
+    <div className="foreground-wrapper">
+      <NavBar chat={true} />
+      <ChatFeild />
     </div>
   );
 }
