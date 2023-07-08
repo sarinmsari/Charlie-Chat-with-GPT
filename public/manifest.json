@@ -9,8 +9,9 @@
   "options_page": "./options.html",
   "content_scripts": [
     {
-      "matches": ["https://*.google.com/*"],
-      "js": ["content.js"]
+      "matches": ["https://*.google.com/*", "https://www.youtube.com/watch?*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
     }
   ],
   "icons": {

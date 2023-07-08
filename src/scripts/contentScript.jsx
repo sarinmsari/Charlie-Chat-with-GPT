@@ -1,6 +1,5 @@
 import React from "react";
 
-console.log("in content script");
 function ContentScript() {
   return (
     <div className="content-wrapper">

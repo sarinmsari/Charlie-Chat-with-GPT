@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import ContentScript from "./scripts/contentScript.jsx";
+import ContentScript, { informOnLoad } from "./scripts/contentScript.jsx";
 
 function init() {
-  const secondaryInner = document.getElementById("secondary-inner")
   const appContainer = document.createElement("div");
   if (!appContainer) {
     throw new Error("Can't find appContainer");
   }
-  secondaryInner.appendChild(appContainer);
+  console.log(document.getElementsByClassName("o3j99 qarstb")[0]);
+  setTimeout(function () {
+    console.log(document.getElementById("secondary-inner"));
+    document.getElementById("secondary-inner").prepend(appContainer);
+  }, 1000);
+
   const root = createRoot(appContainer);
   console.log(appContainer);
   root.render(<ContentScript />);
