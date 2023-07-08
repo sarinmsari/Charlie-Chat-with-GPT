@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
+import { render } from "react-dom";
+
 
 function Options() {
     return ( <div className="options-container">
-        <p className="options-text">Options Page</p>
+        <h3>Options Page</h3>
     </div> );
 }
+
+export default Options;
 
 render(<Options />, document.getElementById("options-target"));

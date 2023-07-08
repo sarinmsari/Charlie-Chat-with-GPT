@@ -8,8 +8,11 @@ function Popup() {
   return (
     <div className="popup-container">
       <NavBar />
-      <ChatFeild/>
+      <ChatFeild />
     </div>
   );
 }
+export default Popup;
+
+
 render(<Popup />, document.getElementById("react-target"));

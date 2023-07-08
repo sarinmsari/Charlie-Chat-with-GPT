@@ -8,7 +8,9 @@ module.exports = {
   mode: process.env.NODE_ENV === "production" ? "production" : "development",
   entry: {
     popup: "./src/popup.jsx",
-    background: "./src/background.jsx",
+    background: "./src/scripts/background.js",
+    options: "./src/options.jsx",
+    content: "./src/content.jsx",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -42,14 +44,19 @@ module.exports = {
           },
         ],
       },
-      //{ test: /\.css$/, use: "css-loader" },
       { test: /\.tsx$/, use: "ts-loader" },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/popup.html",
       filename: "popup.html",
+      template: "src/popup.html",
+      chunks: ["popup"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "options.html",
+      template: "src/options.html",
+      chunks: ["options"],
     }),
     new CopyPlugin({
       patterns: [{ from: "public" }],
