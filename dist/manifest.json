@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Charlie",
-  "description": "Base Level Extension",
+  "description": "Chat with ChatGPT",
   "version": "1.0",
   "action": {
     "default_popup": "popup.html"

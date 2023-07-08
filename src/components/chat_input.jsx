@@ -35,7 +35,7 @@ function ChatInput({ setQuery, setResponse, setError }) {
         name="chatInput"
         className="chat-input-section"
         placeholder="Start typing your prompt here..."
-        value={inputText.trim()}
+        value={inputText}
         onChange={handleInput}
       />
       <button
