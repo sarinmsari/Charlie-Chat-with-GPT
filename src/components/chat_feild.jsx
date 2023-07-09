@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ChatInput from "./chat_input.jsx";
 
-function ChatFeild() {
+function ChatFeild({ chat = false }) {
   const [chatQuery, setChatQuery] = useState("");
   const [chatQueryResponse, setChatQueryResponse] = useState(
     "Hi! Ask Charlie anything you like"
@@ -29,6 +29,7 @@ function ChatFeild() {
         setQuery={setChatQuery}
         setResponse={setChatQueryResponse}
         setError={setErrorMessage}
+        chat={chat}
       />
     </>
   );

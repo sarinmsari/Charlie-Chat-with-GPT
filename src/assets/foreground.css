@@ -9,14 +9,35 @@
 }
 
 /* Navbar styling */
-.navbar-contianer {
+.navbar-container {
   width: 100%;
   padding: 1vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .navbar-icon {
   height: 25px;
   width: 25px;
 }
+.toggle-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.chat-toggle-section {
+  right: 0;
+  border-radius: 10px;
+  font-size: medium;
+}
+.toggle-icon{
+  margin-right: 10px;
+}
+
 /* Navbar styling end */
 
 /* chat feild styling */
@@ -82,13 +103,15 @@ input:focus {
 }
 .chat-submit-button {
   height: 30px;
-  margin-right: 8px;
+  margin-right: 0px;
   color: white;
   opacity: 0.7;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: #1e293b;
+  border-radius: 10px;
 }
 .chat-submit-button:hover {
   opacity: 1;

@@ -9,7 +9,11 @@
   "options_page": "./options.html",
   "content_scripts": [
     {
-      "matches": ["https://*.google.com/*", "https://www.youtube.com/*", "file:///C:/Users/sarin/Downloads/*"],
+      "matches": [
+        "https://*.google.com/*",
+        "https://www.youtube.com/*",
+        "file:///C:/Users/sarin/Downloads/*"
+      ],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
@@ -20,5 +24,5 @@
     "48": "icon.png",
     "128": "icon.png"
   },
-  "permissions": ["tabs", "storage"]
+  "permissions": ["tabs", "storage", "nativeMessaging"]
 }

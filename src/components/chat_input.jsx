@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ChatInput({ setQuery, setResponse, setError }) {
+function ChatInput({ setQuery, setResponse, setError, chat }) {
   const [inputText, setInputText] = useState("");
 
   const handleInput = (e) => {
@@ -44,7 +44,7 @@ function ChatInput({ setQuery, setResponse, setError }) {
         onClick={handleSubmit}
         className="chat-submit-button"
       >
-        <img src="./send.png" alt="send icon" />
+        {chat ? <span>Send</span> : <img src="./send.png" alt="send icon" />}
       </button>
     </form>
   );
