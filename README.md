@@ -9,7 +9,7 @@ To install and use this Chrome extension, follow these steps:
 3. Enter chrome://extensions in the address bar.
 4. Enable the "Developer mode" toggle switch in the top right corner of the extensions page.
 5. Click on the "Load unpacked" button.
-6. Select the folder where you cloned or unzipped the repository.
+6. Select the 'dist' folder from where you cloned or unzipped the repository.
 7. The extension will be installed and ready to use.
 
 ## Usage
