@@ -1,6 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
-
+import ReactDOM from "react-dom/client";
 
 function Options() {
     return ( <div className="options-container">
@@ -10,4 +9,6 @@ function Options() {
 
 export default Options;
 
-render(<Options />, document.getElementById("options-target"));
+//render(<Options />, document.getElementById("options-target"));
+ReactDOM.createRoot(document.getElementById("options-target")).render(<Options />);
+
