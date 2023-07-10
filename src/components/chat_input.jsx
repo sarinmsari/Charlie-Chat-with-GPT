@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ChatContext } from "../context/chat_context.js";
 
-function ChatInput({ setQuery, setResponse, setError, chat }) {
+function ChatInput({ chat }) {
   const [inputText, setInputText] = useState("");
+
+  const { setChatQuery } = useContext(ChatContext);
+  const { setChatQueryResponse } = useContext(ChatContext);
+  const { setErrorMessage } = useContext(ChatContext);
 
   const handleInput = (e) => {
     setInputText(e.target.value);
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setResponse("");
-    setQuery(inputText);
+    setChatQueryResponse("");
+    setChatQuery(inputText);
 
     //POST request
     fetch("https://jsonplaceholder.typicode.com/posts", {
@@ -21,10 +26,10 @@ function ChatInput({ setQuery, setResponse, setError, chat }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        setResponse(data.message);
+        setChatQueryResponse(data.message);
       })
       .catch((err) => {
-        setError(err.message);
+        setErrorMessage(err.message);
       });
     setInputText("");
   };
